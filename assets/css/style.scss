@@ -1,0 +1,29 @@
+---
+---
+
+/*
+  If the number of TAB files has changed, the following variable is required.
+  And it must be defined before `@import`.
+*/
+$tab-count: {{ site.tabs | size | plus: 1 }}; // plus 1 for home tab
+
+@import "{{ site.theme }}";
+
+/* append your custom style below */
+code{
+  font-weight:650;
+}
+blockqoute{
+  color: #353535;
+}
+p{
+  margin-bottom: .4rem;
+}
+.post-content{
+  line-height:1.7;
+}
+#page-category a:hover, #page-tag a:hover, .license-wrapper > a:hover, #post-list .post-preview a:hover, #search-results a:hover, #topbar #breadcrumb a:hover, .post-content a:not(.img-link):hover, .post-meta a:hover, .post a:hover code, #access-lastmod a:hover, footer a:hover{
+color: #d2603a !important;
+border-bottom: 0px solid #d2603a;
+text-decoration: none;
+}
